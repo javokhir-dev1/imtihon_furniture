@@ -1,0 +1,74 @@
+import styled from "styled-components";
+import { BackgroundColors, TextColors } from "../../../../theme";
+
+export const NavMainWrapper = styled.div`
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  & .nav_logo {
+    display: flex;
+    align-self: center;
+  }
+`;
+
+export const SearchWrapper = styled.div`
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+
+  .catalog-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    padding: 10px 28px;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+    border-radius: 100px;
+    background-color: ${BackgroundColors.primary};
+    border: none;
+    color: ${TextColors.white};
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+    border: 2px solid ${BackgroundColors.primary};
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  & input {
+    width: 100%;
+    height: 50px;
+    border-radius: 100px;
+    padding: 0 20px ;
+    border: none;
+    font-size: 15px;
+    outline: none;
+  }
+
+  .search-icon-wrap {
+    position: absolute;
+    right: 24px;
+    top: 16px;
+  }
+`;
+
+export const NavigationItems = styled.div`
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  .item {
+    text-align: center;
+  }
+`;
