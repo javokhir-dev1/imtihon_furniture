@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const All = styled.div`
-  margin-bottom: 1141px;
   .navigate{
     display: flex;
     align-items: center;

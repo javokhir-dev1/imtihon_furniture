@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Navigate = styled.div`
-
     .navigate{
         display: flex;
         align-items: center;
@@ -15,49 +14,66 @@ export const Navigate = styled.div`
 `
 
 export const Task = styled.div`
+    display: flex;
+    gap: 100px;
+    margin: 50px 0;
+    .first_col {
+        width: 42%;
+        .task1 {
+            background-color: #F2F2F2;
+            padding: 22px 20px;
+            border-radius: 13px;
+            margin: 15px 0;
+            p:first-child {
+                font-size: 50px;
+                font-weight: 600;
+                color: #454545;
+                margin-bottom: 70px;
+            }
 
-        display: flex;
-        gap: 102px;
-    & h1{
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 110%;
-        padding-bottom: 36px;
-        padding-top: 15px;
+            p:last-child {
+                font-weight: 500;
+                color: #454545;
+            }
+        }
     }
 
-    .task1{
-        width: 530px;
-        height: 255px;
-        background: #f2f2f2;
-        border-radius: 15px;
-        margin-bottom: 20px;
+    .last_col {
+        width: 58%;
 
-        & p{
-            font-weight: 700;
-            font-size: 64px;
-            line-height: 110%;
-            padding: 32px;
-        }
-
-       .task2{
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 150%;
+        p {
             color: #454545;
-            padding-top: 51px;
-       }
-    }
-
-    .text_p{
-        
-        & p{
-            padding-bottom: 25px;
-            font-weight: 500;
-            font-size: 20px;
             line-height: 150%;
-            padding-top: 17px;
+            margin-bottom: 25px;
+            margin-top: 40px;
+            padding-right: 80px;
         }
     }
 
+    h1 {
+        font-weight: 700;
+        font-size: 50px;
+        color: #454545;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        gap: 0;
+        .first_col {
+            width: 100%;
+        }
+        .last_col {
+            width: 100%;
+            margin-top: 0;
+        }
+        flex-direction: column;
+    }
+
+    
+`
+
+export const TextBox = styled.div`
+    @media (min-width: 769px) {
+        display: none;
+    }
 `

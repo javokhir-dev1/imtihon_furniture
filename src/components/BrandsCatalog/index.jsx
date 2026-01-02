@@ -18,7 +18,7 @@ function BrandsCalatog() {
   const swiperRef = useRef(null);
 
   return (
-    <BrandsSection>
+    <BrandsSection className="container">
       <div className="brands-header">
         <h2>Только проверенные бренды</h2>
         <div className="arrows">

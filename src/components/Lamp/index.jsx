@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ProductCard, ProductsGrid, ProductsHeader } from './Lamp.styled';
 import { HeartIcon, Karzinka, UpArr } from '../icons';
 import product from "../../assets/product.png";
 import { BackgroundColors } from '../../theme';
 
 import { useAppNavigation } from "../../hooks/useAppNavigation";
+import { useLocation } from "react-router-dom";
 
 
 function Lamp(props) {
@@ -60,7 +61,19 @@ function Lamp(props) {
     },
   ];
 
-  const { goToAllProducts } = useAppNavigation()
+  const [isNotVisible, setIsNotVisible] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/all-products") {
+      setIsNotVisible(true);
+    } else {
+      setIsNotVisible(false);
+    }
+  }, [location.pathname]);
+
+
+  const { goToAllProducts, goToDetail } = useAppNavigation()
   return (
     <div className="container">
       <div>
@@ -70,7 +83,7 @@ function Lamp(props) {
           </h3>
           <div
             className="goToAllProducts"
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", display: isNotVisible ? "none" : "" }}
           >
             <button onClick={goToAllProducts}>Все товары <UpArr className="catalog_btn" /></button>
           </div>
@@ -78,7 +91,7 @@ function Lamp(props) {
         </ProductsHeader>
         <ProductsGrid>
           {products.map((product) => (
-            <ProductCard key={product.id}>
+            <ProductCard key={product.id} onClick={goToDetail}>
               <div className="product-heart">
                 <HeartIcon />
               </div>

@@ -5,16 +5,14 @@ import { All } from "./AllProducts.styled";
 import Lamp from "../../components/Lamp";
 
 function AllProducts(props) {
-  const { goToHome } = useAppNavigation();
+  const { goToHome } = useAppNavigation()
 
   return (
     <All>
-      <div className="navigate">
+      <div className="navigate" style={{margin: "0 auto", maxWidth: "1300px", width: "100%"}}>
         <p onClick={goToHome}>Главная</p>
         <RightArr />
-        <p>Популярные товары</p>
       </div>
-      <h1>Популярные товары</h1>
 
       <Lamp />
     </All>

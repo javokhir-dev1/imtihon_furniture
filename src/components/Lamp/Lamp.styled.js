@@ -48,13 +48,13 @@ export const ProductsGrid = styled.div`
       display: none;
     }
   }
-
 `
 
 export const ProductCard = styled.div`
   position: relative;
   width: 310px;
   padding: 20px;
+  cursor: pointer;
   .product-heart {
     position: absolute;
     right: 10px;

@@ -28,12 +28,8 @@ export const BrandsSection = styled.section`
         justify-content: center;
         border-radius: 50%; 
         border: none;
-        
         width: 45px;  
         height: 45px;
-
-        
-        
         svg {
           width: 28px;
           height: 28px;

@@ -35,7 +35,6 @@ export const HomePage = styled.div`
   }
 `;
 
-
 export const HomePageSlide = styled.div`
   display: flex;
   justify-content: space-between;

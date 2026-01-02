@@ -9,6 +9,15 @@ export const Production = styled.div`
     flex-direction: column;
     padding-top: 50px;
     margin-bottom: 50px;
+    & h1.desktop_h1 {
+      display: none;
+    }
+  }
+
+  @media (min-width: 769px) {
+    & h1.mobile_h1 {
+      display: none;
+    }
   }
 
   & h1 {

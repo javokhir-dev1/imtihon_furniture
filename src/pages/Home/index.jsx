@@ -32,9 +32,9 @@ function Home() {
 
         <Brands />
 
-        {/* <Hauses1 />
+        <Hauses1 />
 
-        <Text /> */}
+        <Text />
       </div>
     </Home1>
   );

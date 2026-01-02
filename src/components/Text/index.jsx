@@ -7,7 +7,8 @@ function Text(props) {
     <div className="container">
       <Production>
         <div>
-          <h1>Производство светильников</h1>
+          <h1 className="desktop_h1">Производство светильников</h1>
+          <h1 className="mobile_h1">Блог</h1>
         </div>
         <div>
           <p>

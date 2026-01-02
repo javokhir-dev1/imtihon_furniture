@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import MainLayout from "../layout/MainLayout.jsx"
 import Loader from "../components/Loader/index.jsx";
+import Detail from "../pages/Detail/index.jsx";
 
 
 const Basket = lazy(() => import("../pages/Basket/index.jsx"));
@@ -32,6 +33,7 @@ function AppRouter() {
           <Route path="about" element={<AboutUs />} />
           <Route path="catalog" element={<Catalog />} />
           <Route path="basket" element={<Basket />} />
+          <Route path="detail" element={<Detail />} />
         </Route>
       </Routes>
     </Suspense>
