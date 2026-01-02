@@ -67,9 +67,7 @@ export const Task = styled.div`
             margin-top: 0;
         }
         flex-direction: column;
-    }
-
-    
+    }    
 `
 
 export const TextBox = styled.div`

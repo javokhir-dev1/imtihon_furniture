@@ -3,7 +3,7 @@ import { BackgroundColors } from "../../theme";
 
 export const FooterWrapper = styled.footer`
   background-color: ${BackgroundColors.lightBlue};
-  padding: 79px;
+  padding: 79px 0;
   margin-top: 60px;
 
   @media (max-width: 768px) {
@@ -13,7 +13,6 @@ export const FooterWrapper = styled.footer`
 
 export const FooterWrapper2 = styled.footer`
   display: flex;
-  justify-content: center;
   gap: 146px;
 
   @media (max-width: 1024px) {
