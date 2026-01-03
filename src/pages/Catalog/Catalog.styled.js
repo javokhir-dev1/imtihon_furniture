@@ -21,6 +21,8 @@ export const CatalogWrapper = styled.div`
     }
   }
 
+  
+
   .navigate {
     display: flex;
     align-items: center;
@@ -40,51 +42,75 @@ export const CatalogWrapper = styled.div`
     text-transform: capitalize;
     margin-top: 20px;
     margin-bottom: 60px;
+    color: #454545;
+  }
+
+  @media (max-width: 768px) {
+    .catalog_p {
+      display: none;
+    }
+
+    .Catalog_h1 {
+      font-size: 25px;
+    }
   }
 `;
 
 export const CatalogGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
 `;
 
+
+
 export const CatalogCard = styled.div`
-  background-color: #f6f6f6;
-  border-radius: 20px;
-  padding: 30px;
-  height: 250px;
-  position: relative;
-  transition: 0.3s;
+  width: 32.2%; 
+  background-color: #F2F2F2;
+  position: relative; 
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-radius: 14px;
+  height: 220px;
 
-  &:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+
+  &:nth-last-child(-n + 2){
+    width: 49.3%;
   }
-
   .title {
-    font-size: 20px;
-    font-weight: 600;
+    position: absolute;
+    top: 25px;
+    left: 25px;
   }
 
-  img {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+  .imgBox {
+    width: 200px;
+    padding: 20px;
+  }
+
+  .imgBox img {
+    width: 100%;
   }
 
   span {
     position: absolute;
-    left: 30px;
-    bottom: 30px;
-    font-size: 14px;
-    color: #888;
+    bottom: 25px;
+    left: 25px;
   }
-`;
 
-export const CatalogGrid1 = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  padding-top: 20px;
-  margin-bottom: 106px;
-`;
+  @media (max-width: 768px) {
+    width: 49%;
+    justify-content: center;
+    .imgBox {
+      width: 150px;
+    }
+    &:last-child {
+      width: 100%;
+      .imgBox {
+        width: 200px;
+      }
+    }
+  }
+`

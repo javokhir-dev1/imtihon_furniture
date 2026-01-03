@@ -2,8 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import MainLayout from "../layout/MainLayout.jsx"
 import Loader from "../components/Loader/index.jsx";
-import Detail from "../pages/Detail/index.jsx";
-
+import NotFoundPage from "../pages/NotFound/index.jsx";
 
 const Basket = lazy(() => import("../pages/Basket/index.jsx"));
 
@@ -16,13 +15,14 @@ const Contacts = lazy(() => import("../pages/Contacts"));
 const AboutUs = lazy(() => import("../pages/About"));
 const AllProducts = lazy(() => import("../pages/AllProducts/index.jsx"));
 const Catalog = lazy(() => import("../pages/Catalog/index.jsx"));
+const Detail = lazy(() => import("../pages/Detail/index.jsx"));
+const Favorite = lazy(() => import("../pages/Favorite/index.jsx"));
 
 function AppRouter() {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-        
           <Route index element={<Home />} />
           <Route path="all-products" element={<AllProducts />} />
           <Route path="blog" element={<Blog />} />
@@ -34,6 +34,8 @@ function AppRouter() {
           <Route path="catalog" element={<Catalog />} />
           <Route path="basket" element={<Basket />} />
           <Route path="detail" element={<Detail />} />
+          <Route path="favorite" element={<Favorite />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </Suspense>

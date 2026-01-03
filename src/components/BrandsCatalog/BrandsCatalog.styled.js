@@ -42,6 +42,10 @@ export const BrandsSection = styled.section`
     width: 100%;
     padding: 10px 0;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const BrandCard = styled.div`

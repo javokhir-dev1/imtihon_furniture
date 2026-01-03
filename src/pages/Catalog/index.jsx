@@ -2,7 +2,6 @@ import React from "react";
 import {
   CatalogCard,
   CatalogGrid,
-  CatalogGrid1,
   CatalogWrapper,
 } from "./Catalog.styled";
 import { RightArr } from "../../components";
@@ -58,6 +57,8 @@ function Catalog(props) {
             catalog7,
             catalog8,
             catalog9,
+            catalog10,
+            catalog11
           ].map((img, index) => (
             <CatalogCard key={index}>
               <p className="title">
@@ -72,27 +73,21 @@ function Catalog(props) {
                     "Трековые светильники",
                     "Уличные светильники",
                     "Технические светильники",
+                    "Светодиодные ленты",
+                    "Комплектуюшие",
                   ][index]
                 }
               </p>
-              <img src={img} alt="Catalog item" />
+              <div className="imgBox">
+                <img src={img} alt="Catalog item" />
+              </div>
               <span>От 540₽ →</span>
             </CatalogCard>
           ))}
         </CatalogGrid>
-        <CatalogGrid1>
-          {[catalog10, catalog11].map((img, index) => (
-            <CatalogCard key={index}>
-              <p className="title">
-                {["Светодиодные ленты", "Комплектуюшие"][index]}
-              </p>
-              <img src={img} alt="Catalog item" />
-              <span>От 540₽ →</span>
-            </CatalogCard>
-          ))}
-        </CatalogGrid1>
 
-        <BrandsCalatog />
+
+        <BrandsCalatog/>
 
         <Houses />
 
