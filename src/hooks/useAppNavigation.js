@@ -9,6 +9,7 @@ export const useAppNavigation = () => {
         goToAllProducts: () => navigate("/all-products"),
         goToBlog: () => navigate("/blog"),
         goToCatalog: () => navigate("/catalog"),
-        goToDetail: () => navigate("/detail")
+        goToDetail: () => navigate("/detail"),
+        goToFavorite: () => navigate("/favorite")
     };
 };

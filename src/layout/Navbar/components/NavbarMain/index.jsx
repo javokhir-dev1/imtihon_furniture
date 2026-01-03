@@ -9,20 +9,20 @@ import {
 
 import { NavMainWrapper, SearchWrapper, NavigationItems } from './NavbarMain.styled';
 import { Link, Navigate, NavLink } from 'react-router-dom';
+import { useAppNavigation } from '../../../../hooks/useAppNavigation';
 
 function NavbarMain(props) {
+  const { goToCatalog, goToFavorite } = useAppNavigation()
   return (
     <NavMainWrapper>
       <NavLink to="/" className="nav_logo">
         <img src="/logo.svg" alt="Logo" />
       </NavLink>
       <SearchWrapper>
-        <NavLink to="/catalog">
-          <button className="catalog-button">
-            <CatalogIcon />
-            <span>Каталог</span>
-          </button>
-        </NavLink>
+        <button style={{ cursor: "pointer" }} onClick={goToCatalog} className="catalog-button">
+          <CatalogIcon />
+          <span>Каталог</span>
+        </button>
         <div className="input-wrapper">
           <input type="text" placeholder="Поиск по товарам" />
           <span className="search-icon-wrap">
@@ -31,10 +31,10 @@ function NavbarMain(props) {
         </div>
       </SearchWrapper>
       <NavigationItems>
-        <NavLink to="/favorite" className="item" style={{ textDecoration: "none", color: "#454545" }}>
+        <div onClick={goToFavorite} style={{ cursor: "pointer" }} className="item">
           <HeartIcon />
           <span>Избранное</span>
-        </NavLink>
+        </div>
         <div className="item">
           <NetworkIcon />
           <span>Сравнение</span>
