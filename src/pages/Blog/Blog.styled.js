@@ -18,6 +18,6 @@ export const Blog1 = styled.div`
     line-height: 110%;
     margin-top: 30px;
     margin-bottom: 60px;
-    color: #454545;
+    color: #454545  ;
   }
 `;

@@ -82,7 +82,7 @@ export const CatalogCard = styled.div`
 `;
 
 
-export const CatalogGridMobile = styled.div`
+export const  CatalogGridMobile = styled.div`
   .swiper-pagination-bullet-active {
     background-color: rgba(69, 69, 69, 0.7) !important;
   }
